@@ -1,7 +1,8 @@
 import React from "react";
 
+
 /**
- * Component to handle file upload. Works **/
+ * Component to handle file upload.**/
  
 function FileUpload() {
   // State to store uploaded file
@@ -11,8 +12,13 @@ function FileUpload() {
   function handleUpload(event) {
     setFile(event.target.files[0]);
 
-    
-  }
+   }
+  // const [items, setItem] = useState([]);
+
+  // useEffect(() => {
+  //    localStorage.setItem('items', JSON.stringify(items));
+  // }, [items]);
+  
 
   return (
     <div id="upload-box">
@@ -20,7 +26,7 @@ function FileUpload() {
       <p>Filename: {file.name}</p>
       <p>File type: {file.type}</p>
       <p>File size: {file.size} bytes</p>
-      <a href={file} download>Download File</a>
+      <a href={file} download>Download File</ a>
       
     </div>
   );
